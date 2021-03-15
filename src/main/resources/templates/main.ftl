@@ -3,6 +3,7 @@
 <@common.page>
     <div>
         <@logout.logout/>
+        <label><a href="/user">Список пользователей</a></label>
     </div>
 
     <div>

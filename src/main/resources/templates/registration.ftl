@@ -1,7 +1,7 @@
 <#import "parts/common.ftl" as common>
 <#import "parts/login.ftl" as login>
 <@common.page>
-    Add new user
-    ${message}
+    <p>Добавление нового пользователя</p>
+    ${message?if_exists}
     <@login.login "/registration" />
 </@common.page>
