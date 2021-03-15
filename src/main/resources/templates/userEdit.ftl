@@ -14,4 +14,6 @@
         </#list>
         <button type="submit">Сохранить</button>
     </form>
+
+    <label><a href="/main">Главная страница</a></label>
 </@common.page>
