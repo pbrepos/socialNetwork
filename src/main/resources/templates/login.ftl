@@ -3,6 +3,6 @@
 <@common.page>
     <@l.login "/login"/>
 
-    <a href="/registration">Add new user</a>
+    <a href="/registration">Регистрация</a>
 
 </@common.page>
