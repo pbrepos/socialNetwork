@@ -1,6 +1,5 @@
 <#import "parts/common.ftl" as common>
 <@common.page>
-    <dive>Hello, user</dive>
-    <a href="/main">Главная старница</a>
-    </body>
+    <h5>Привет, гость!</h5>
+    <div>Это простое приложение соц. сети</div>
 </@common.page>
