@@ -3,5 +3,5 @@
 <@common.page>
     <p>Добавление нового пользователя</p>
     ${message?if_exists}
-    <@login.login "/registration" />
+    <@login.login "/registration" true/>
 </@common.page>
