@@ -16,6 +16,8 @@ public class User implements UserDetails {
     private String username;
     private String password;
     private boolean isActive;
+    private String email;
+    private String activationCode;
 
     @ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)
     @CollectionTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"))
@@ -50,6 +52,7 @@ public class User implements UserDetails {
         return isActive;
     }
 
+    @Column(columnDefinition = "boolean default false")
     public void setActive(boolean active) {
         isActive = active;
     }
@@ -89,5 +92,21 @@ public class User implements UserDetails {
 
     public boolean isAdmin() {
         return roles.contains(Role.ADMIN);
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getActivationCode() {
+        return activationCode;
+    }
+
+    public void setActivationCode(String activationCode) {
+        this.activationCode = activationCode;
     }
 }
