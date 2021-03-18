@@ -18,14 +18,26 @@
         Добавить сообщение
     </a>
 
-    <div class="collapse" id="collapseExample">
+    <div class="collapse <#if message??>show</#if>" id="collapseExample">
         <div class="form-group mb-3">
             <form method="post" enctype="multipart/form-data">
                 <div class="input-group  mb-3">
-                    <input class="form-control" type="text" name="text" placeholder="Ввудите сообщение"/>
+                    <input class="form-control ${(textError??)?string('is-invalid', '')}" type="text"
+                           value="<#if message??>${message.text}</#if>" name="text" placeholder="Ввудите сообщение"/>
+                    <#if textError??>
+                        <div class="invalid-feedback">
+                         ${textError}
+                        </div>
+                    </#if>
                 </div>
                 <div class="input-group mb-3">
-                    <input class="form-control" type="text" name="tag" placeholder="Тег"/>
+                    <input class="form-control ${(textError??)?string('is-invalid', '')}"  type="text"
+                           value="<#if message??>${message.text}</#if>" name="tag" placeholder="Тег"/>
+                    <#if tagError??>
+                        <div class="invalid-feedback">
+                            ${tagError}
+                        </div>
+                    </#if>
                 </div>
                 <div class="input-group  mb-3">
 
